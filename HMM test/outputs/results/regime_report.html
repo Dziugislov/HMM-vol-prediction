@@ -1,0 +1,1537 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HMM Regime Validation Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        .config {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .config p {
+            margin: 5px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .summary-stats {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HMM Regime Validation Report</h1>
+        <p><strong>Generated:</strong> 2025-12-16 09:52:11</p>
+        
+        <div class="config">
+            <h2>Configuration Recap</h2>
+            <p><strong>States:</strong> 2</p>
+            <p><strong>Train Fraction:</strong> 0.7</p>
+            <p><strong>Step Mode:</strong> Best step per symbol/horizon</p>
+            <p><strong>Seed:</strong> N/A</p>
+            <p><strong>Source File:</strong> regime_summary.xlsx</p>
+        </div>
+        
+        <div class="summary-stats">
+            <h2>Summary Statistics</h2>
+            <p><strong>Average Regime Accuracy:</strong> 0.660</p>
+            <p><strong>Average Log Loss:</strong> 0.604 (lower = better)</p>
+            <p><strong>Total Runs:</strong> 156</p>
+            <p><strong>Unique Symbols:</strong> 39</p>
+            <p><strong>Unique Horizons:</strong> [20, 45, 60, 90]</p>
+        </div>
+        
+        <h2>Top 10 Symbols by Average Accuracy</h2>
+        <ul>
+    <li><strong>NVDA</strong>: 1.000</li>
+<li><strong>NFLX</strong>: 1.000</li>
+<li><strong>EEM</strong>: 0.857</li>
+<li><strong>V</strong>: 0.820</li>
+<li><strong>BAC</strong>: 0.803</li>
+<li><strong>HYG</strong>: 0.790</li>
+<li><strong>UNH</strong>: 0.780</li>
+<li><strong>FXI</strong>: 0.776</li>
+<li><strong>MA</strong>: 0.771</li>
+<li><strong>XLF</strong>: 0.749</li>
+
+        </ul>
+        
+        <h2>Regime Accuracy Heatmap</h2>
+        <img src="regime_acc_heatmap.png" alt="Regime Accuracy Heatmap">
+        
+        <h2>Regime Log Loss Heatmap</h2>
+        <img src="regime_logloss_heatmap.png" alt="Regime Log Loss Heatmap">
+        
+        <h2>Summary Table (Best Step per Symbol/Horizon)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Horizon</th>
+                    <th>Step</th>
+                    <th>Regime Accuracy</th>
+                    <th>Log Loss</th>
+                    <th>N Forecasts</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td>AAPL</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.733</td>
+            <td>0.603</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>AAPL</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.672</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>AAPL</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.600</td>
+            <td>0.684</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>AAPL</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.730</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>AMD</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.683</td>
+            <td>0.668</td>
+            <td>41</td>
+        </tr>
+        
+        <tr>
+            <td>AMD</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.611</td>
+            <td>0.681</td>
+            <td>18</td>
+        </tr>
+        
+        <tr>
+            <td>AMD</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.615</td>
+            <td>0.697</td>
+            <td>13</td>
+        </tr>
+        
+        <tr>
+            <td>AMD</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.556</td>
+            <td>0.698</td>
+            <td>9</td>
+        </tr>
+        
+        <tr>
+            <td>AMZN</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.733</td>
+            <td>0.572</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>AMZN</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.727</td>
+            <td>0.621</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>AMZN</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.680</td>
+            <td>0.642</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>AMZN</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.562</td>
+            <td>0.673</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>BAC</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.396</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>BAC</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.848</td>
+            <td>0.450</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>BAC</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.800</td>
+            <td>0.500</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>BAC</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.750</td>
+            <td>0.560</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>CVX</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.827</td>
+            <td>0.526</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>CVX</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.727</td>
+            <td>0.607</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>CVX</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.520</td>
+            <td>0.671</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>CVX</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.728</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>DIA</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.733</td>
+            <td>0.577</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>DIA</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.673</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>DIA</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.600</td>
+            <td>0.670</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>DIA</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.756</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>EEM</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.867</td>
+            <td>0.381</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>EEM</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.909</td>
+            <td>0.450</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>EEM</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.840</td>
+            <td>0.509</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>EEM</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.812</td>
+            <td>0.541</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>FXI</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.457</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>FXI</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.758</td>
+            <td>0.497</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>FXI</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.720</td>
+            <td>0.549</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>FXI</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.812</td>
+            <td>0.497</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>GDX</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.781</td>
+            <td>0.486</td>
+            <td>73</td>
+        </tr>
+        
+        <tr>
+            <td>GDX</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.656</td>
+            <td>0.603</td>
+            <td>32</td>
+        </tr>
+        
+        <tr>
+            <td>GDX</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.708</td>
+            <td>0.593</td>
+            <td>24</td>
+        </tr>
+        
+        <tr>
+            <td>GDX</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.688</td>
+            <td>0.636</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>GLD</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.800</td>
+            <td>0.465</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>GLD</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.727</td>
+            <td>0.613</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>GLD</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.840</td>
+            <td>0.546</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>GLD</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.625</td>
+            <td>0.637</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>GOOGL</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.627</td>
+            <td>0.689</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>GOOGL</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.515</td>
+            <td>0.749</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>GOOGL</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.520</td>
+            <td>0.718</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>GOOGL</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.438</td>
+            <td>0.802</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>HYG</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.871</td>
+            <td>0.403</td>
+            <td>70</td>
+        </tr>
+        
+        <tr>
+            <td>HYG</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.839</td>
+            <td>0.479</td>
+            <td>31</td>
+        </tr>
+        
+        <tr>
+            <td>HYG</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.783</td>
+            <td>0.500</td>
+            <td>23</td>
+        </tr>
+        
+        <tr>
+            <td>HYG</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.667</td>
+            <td>0.621</td>
+            <td>15</td>
+        </tr>
+        
+        <tr>
+            <td>IBM</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.480</td>
+            <td>0.736</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>IBM</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.545</td>
+            <td>0.745</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>IBM</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.520</td>
+            <td>0.782</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>IBM</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.438</td>
+            <td>0.851</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>INTC</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.827</td>
+            <td>0.557</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>INTC</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.455</td>
+            <td>0.732</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>INTC</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.440</td>
+            <td>0.728</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>INTC</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.188</td>
+            <td>0.759</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>IWM</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.693</td>
+            <td>0.579</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>IWM</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.545</td>
+            <td>0.696</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>IWM</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.630</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>IWM</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.773</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>JPM</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.386</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>JPM</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.727</td>
+            <td>0.567</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>JPM</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.800</td>
+            <td>0.514</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>JPM</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.625</td>
+            <td>0.705</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>KO</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.640</td>
+            <td>0.628</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>KO</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.703</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>KO</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.520</td>
+            <td>0.773</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>KO</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.798</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>MA</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.822</td>
+            <td>0.470</td>
+            <td>73</td>
+        </tr>
+        
+        <tr>
+            <td>MA</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.719</td>
+            <td>0.595</td>
+            <td>32</td>
+        </tr>
+        
+        <tr>
+            <td>MA</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.792</td>
+            <td>0.563</td>
+            <td>24</td>
+        </tr>
+        
+        <tr>
+            <td>MA</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.750</td>
+            <td>0.603</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>MCD</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.667</td>
+            <td>0.647</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>MCD</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.576</td>
+            <td>0.741</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>MCD</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.652</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>MCD</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.562</td>
+            <td>0.721</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>META</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.627</td>
+            <td>0.621</td>
+            <td>51</td>
+        </tr>
+        
+        <tr>
+            <td>META</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.500</td>
+            <td>0.708</td>
+            <td>22</td>
+        </tr>
+        
+        <tr>
+            <td>META</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.353</td>
+            <td>0.711</td>
+            <td>17</td>
+        </tr>
+        
+        <tr>
+            <td>META</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.364</td>
+            <td>0.719</td>
+            <td>11</td>
+        </tr>
+        
+        <tr>
+            <td>MSFT</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.627</td>
+            <td>0.603</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>MSFT</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.697</td>
+            <td>0.623</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>MSFT</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.666</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>MSFT</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.625</td>
+            <td>0.694</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>NFLX</td>
+            <td>20</td>
+            <td>20</td>
+            <td>1.000</td>
+            <td>0.015</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>NFLX</td>
+            <td>45</td>
+            <td>45</td>
+            <td>1.000</td>
+            <td>0.015</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>NFLX</td>
+            <td>60</td>
+            <td>60</td>
+            <td>1.000</td>
+            <td>0.015</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>NFLX</td>
+            <td>90</td>
+            <td>90</td>
+            <td>1.000</td>
+            <td>0.016</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>NKE</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.733</td>
+            <td>0.567</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>NKE</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.703</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>NKE</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.600</td>
+            <td>0.705</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>NKE</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.688</td>
+            <td>0.637</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>NVDA</td>
+            <td>20</td>
+            <td>20</td>
+            <td>1.000</td>
+            <td>0.115</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>NVDA</td>
+            <td>45</td>
+            <td>45</td>
+            <td>1.000</td>
+            <td>0.116</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>NVDA</td>
+            <td>60</td>
+            <td>60</td>
+            <td>1.000</td>
+            <td>0.116</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>NVDA</td>
+            <td>90</td>
+            <td>90</td>
+            <td>1.000</td>
+            <td>0.117</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>QQQ</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.760</td>
+            <td>0.585</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>QQQ</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.515</td>
+            <td>0.672</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>QQQ</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.560</td>
+            <td>0.689</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>QQQ</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.438</td>
+            <td>0.758</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>SPY</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.560</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>SPY</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.662</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>SPY</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.600</td>
+            <td>0.676</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>SPY</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.727</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>TLT</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.649</td>
+            <td>0.690</td>
+            <td>37</td>
+        </tr>
+        
+        <tr>
+            <td>TLT</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.438</td>
+            <td>0.784</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>TLT</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.667</td>
+            <td>0.659</td>
+            <td>12</td>
+        </tr>
+        
+        <tr>
+            <td>TLT</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.625</td>
+            <td>0.697</td>
+            <td>8</td>
+        </tr>
+        
+        <tr>
+            <td>TSLA</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.534</td>
+            <td>0.676</td>
+            <td>58</td>
+        </tr>
+        
+        <tr>
+            <td>TSLA</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.400</td>
+            <td>0.750</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>TSLA</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.474</td>
+            <td>0.717</td>
+            <td>19</td>
+        </tr>
+        
+        <tr>
+            <td>TSLA</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.417</td>
+            <td>0.751</td>
+            <td>12</td>
+        </tr>
+        
+        <tr>
+            <td>UNH</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.422</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>UNH</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.758</td>
+            <td>0.537</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>UNH</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.800</td>
+            <td>0.498</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>UNH</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.750</td>
+            <td>0.572</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>USO</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.770</td>
+            <td>0.546</td>
+            <td>74</td>
+        </tr>
+        
+        <tr>
+            <td>USO</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.697</td>
+            <td>0.584</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>USO</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.542</td>
+            <td>0.715</td>
+            <td>24</td>
+        </tr>
+        
+        <tr>
+            <td>USO</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.625</td>
+            <td>0.666</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>V</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.803</td>
+            <td>0.501</td>
+            <td>66</td>
+        </tr>
+        
+        <tr>
+            <td>V</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.828</td>
+            <td>0.478</td>
+            <td>29</td>
+        </tr>
+        
+        <tr>
+            <td>V</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.864</td>
+            <td>0.447</td>
+            <td>22</td>
+        </tr>
+        
+        <tr>
+            <td>V</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.786</td>
+            <td>0.529</td>
+            <td>14</td>
+        </tr>
+        
+        <tr>
+            <td>XLE</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.493</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLE</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.848</td>
+            <td>0.597</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLE</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.520</td>
+            <td>0.673</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLE</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.312</td>
+            <td>0.744</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLF</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.800</td>
+            <td>0.462</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLF</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.788</td>
+            <td>0.544</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLF</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.720</td>
+            <td>0.571</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLF</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.688</td>
+            <td>0.632</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLI</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.773</td>
+            <td>0.535</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLI</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.670</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLI</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.638</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLI</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.500</td>
+            <td>0.779</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLK</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.720</td>
+            <td>0.639</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLK</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.485</td>
+            <td>0.727</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLK</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.480</td>
+            <td>0.781</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLK</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.438</td>
+            <td>0.820</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLP</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.813</td>
+            <td>0.509</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLP</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.606</td>
+            <td>0.682</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLP</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.653</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLP</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.562</td>
+            <td>0.731</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLU</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.507</td>
+            <td>0.722</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLU</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.545</td>
+            <td>0.702</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLU</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.640</td>
+            <td>0.651</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLU</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.438</td>
+            <td>0.762</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XLV</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.747</td>
+            <td>0.548</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XLV</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.636</td>
+            <td>0.644</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XLV</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.680</td>
+            <td>0.617</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XLV</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.562</td>
+            <td>0.714</td>
+            <td>16</td>
+        </tr>
+        
+        <tr>
+            <td>XOM</td>
+            <td>20</td>
+            <td>20</td>
+            <td>0.680</td>
+            <td>0.628</td>
+            <td>75</td>
+        </tr>
+        
+        <tr>
+            <td>XOM</td>
+            <td>45</td>
+            <td>45</td>
+            <td>0.636</td>
+            <td>0.676</td>
+            <td>33</td>
+        </tr>
+        
+        <tr>
+            <td>XOM</td>
+            <td>60</td>
+            <td>60</td>
+            <td>0.400</td>
+            <td>0.724</td>
+            <td>25</td>
+        </tr>
+        
+        <tr>
+            <td>XOM</td>
+            <td>90</td>
+            <td>90</td>
+            <td>0.188</td>
+            <td>0.796</td>
+            <td>16</td>
+        </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+    

@@ -1,0 +1,22 @@
+HMM MODEL VALIDATION RESULTS - MULTI SYMBOL
+================================================================================
+Generated: 2025-12-16 12:55:12
+Symbols tested: 39
+Horizons: [45, 60, 75, 90]
+Step mode: H
+Proxy: Parkinson, States: 2, train_frac=0.7, ratio_cutoff=1.48
+--------------------------------------------------------------------------------
+
+STEP SETS USED:
+H=45: [45]
+H=60: [60]
+H=75: [75]
+H=90: [90]
+
+BEST RESULTS PER HORIZON:
+H=45: XLU step=45 (MAPE=0.159, excl=15.2%)
+H=60: XLU step=60 (MAPE=0.111, excl=20.0%)
+H=75: AMD step=75 (MAPE=0.138, excl=18.2%)
+H=90: AMD step=90 (MAPE=0.095, excl=44.4%)
+
+Excel saved to: outputs/results/validation_results_20251216_122123.xlsx

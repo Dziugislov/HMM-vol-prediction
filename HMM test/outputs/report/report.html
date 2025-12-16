@@ -1,0 +1,226 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>HMM Volatility Body-Validation Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            h1, h2 { color: #2c3e50; }
+            .summary { background-color: #f8f9fa; padding: 20px; border-radius: 5px; }
+            .config { background-color: #e9ecef; padding: 15px; border-radius: 5px; }
+            .takeaways { background-color: #d4edda; padding: 15px; border-radius: 5px; }
+            img { max-width: 100%; height: auto; margin: 10px 0; }
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+        </style>
+    </head>
+    <body>
+        <h1>HMM Volatility Body-Validation Report</h1>
+        <p><strong>Generated:</strong> 2025-12-16 12:57:10</p>
+        
+        <div class="config">
+            <h2>Configuration Recap</h2>
+            <ul>
+                <li><strong>Symbols tested:</strong> 39</li>
+                <li><strong>Horizons:</strong> [45, 60, 75, 90]</li>
+                <li><strong>Total runs:</strong> 156</li>
+                <li><strong>States:</strong> 2</li>
+                <li><strong>Train fraction:</strong> 70.0%</li>
+                <li><strong>Ratio cutoff:</strong> 1.48</li>
+                <li><strong>Band multiplier:</strong> 1.25</li>
+                <li><strong>Step mode:</strong> Variable (best step per symbol/horizon)</li>
+                <li><strong>Years of data:</strong> 20</li>
+            </ul>
+        </div>
+        
+        <h2>Summary Table</h2>
+        <p><strong>Averages:</strong> MAPE = 0.281, Excluded = 20.6%, Terminal Return Band Hit-Rate = 90.0%</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Horizon</th>
+                    <th>Step</th>
+                    <th>MAPE</th>
+                    <th>Excluded %</th>
+                    <th>Terminal Return Band Hit-Rate</th>
+                    <th>N Forecasts</th>
+                    <th>N Kept</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>AAPL</td><td>45</td><td>45</td><td>0.297</td><td>30.3%</td><td>69.6%</td><td>33</td><td>23</td></tr>
+<tr><td>AAPL</td><td>60</td><td>60</td><td>0.252</td><td>20.0%</td><td>85.0%</td><td>25</td><td>20</td></tr>
+<tr><td>AAPL</td><td>75</td><td>75</td><td>0.297</td><td>10.0%</td><td>88.9%</td><td>20</td><td>18</td></tr>
+<tr><td>AAPL</td><td>90</td><td>90</td><td>0.287</td><td>25.0%</td><td>100.0%</td><td>16</td><td>12</td></tr>
+<tr><td>AMD</td><td>45</td><td>45</td><td>0.213</td><td>27.8%</td><td>92.3%</td><td>18</td><td>13</td></tr>
+<tr><td>AMD</td><td>60</td><td>60</td><td>0.167</td><td>30.8%</td><td>88.9%</td><td>13</td><td>9</td></tr>
+<tr><td>AMD</td><td>75</td><td>75</td><td>0.138</td><td>18.2%</td><td>88.9%</td><td>11</td><td>9</td></tr>
+<tr><td>AMD</td><td>90</td><td>90</td><td>0.095</td><td>44.4%</td><td>80.0%</td><td>9</td><td>5</td></tr>
+<tr><td>AMZN</td><td>45</td><td>45</td><td>0.288</td><td>27.3%</td><td>95.8%</td><td>33</td><td>24</td></tr>
+<tr><td>AMZN</td><td>60</td><td>60</td><td>0.231</td><td>24.0%</td><td>89.5%</td><td>25</td><td>19</td></tr>
+<tr><td>AMZN</td><td>75</td><td>75</td><td>0.257</td><td>25.0%</td><td>100.0%</td><td>20</td><td>15</td></tr>
+<tr><td>AMZN</td><td>90</td><td>90</td><td>0.252</td><td>31.2%</td><td>81.8%</td><td>16</td><td>11</td></tr>
+<tr><td>BAC</td><td>45</td><td>45</td><td>0.457</td><td>15.2%</td><td>100.0%</td><td>33</td><td>28</td></tr>
+<tr><td>BAC</td><td>60</td><td>60</td><td>0.406</td><td>16.0%</td><td>95.2%</td><td>25</td><td>21</td></tr>
+<tr><td>BAC</td><td>75</td><td>75</td><td>0.495</td><td>20.0%</td><td>100.0%</td><td>20</td><td>16</td></tr>
+<tr><td>BAC</td><td>90</td><td>90</td><td>0.459</td><td>12.5%</td><td>78.6%</td><td>16</td><td>14</td></tr>
+<tr><td>CVX</td><td>45</td><td>45</td><td>0.184</td><td>21.2%</td><td>96.2%</td><td>33</td><td>26</td></tr>
+<tr><td>CVX</td><td>60</td><td>60</td><td>0.160</td><td>24.0%</td><td>100.0%</td><td>25</td><td>19</td></tr>
+<tr><td>CVX</td><td>75</td><td>75</td><td>0.204</td><td>25.0%</td><td>86.7%</td><td>20</td><td>15</td></tr>
+<tr><td>CVX</td><td>90</td><td>90</td><td>0.187</td><td>12.5%</td><td>92.9%</td><td>16</td><td>14</td></tr>
+<tr><td>DIA</td><td>45</td><td>45</td><td>0.320</td><td>15.2%</td><td>82.1%</td><td>33</td><td>28</td></tr>
+<tr><td>DIA</td><td>60</td><td>60</td><td>0.253</td><td>12.0%</td><td>95.5%</td><td>25</td><td>22</td></tr>
+<tr><td>DIA</td><td>75</td><td>75</td><td>0.304</td><td>20.0%</td><td>87.5%</td><td>20</td><td>16</td></tr>
+<tr><td>DIA</td><td>90</td><td>90</td><td>0.318</td><td>18.8%</td><td>84.6%</td><td>16</td><td>13</td></tr>
+<tr><td>EEM</td><td>45</td><td>45</td><td>0.685</td><td>21.2%</td><td>96.2%</td><td>33</td><td>26</td></tr>
+<tr><td>EEM</td><td>60</td><td>60</td><td>0.646</td><td>20.0%</td><td>95.0%</td><td>25</td><td>20</td></tr>
+<tr><td>EEM</td><td>75</td><td>75</td><td>0.656</td><td>25.0%</td><td>93.3%</td><td>20</td><td>15</td></tr>
+<tr><td>EEM</td><td>90</td><td>90</td><td>0.733</td><td>31.2%</td><td>90.9%</td><td>16</td><td>11</td></tr>
+<tr><td>FXI</td><td>45</td><td>45</td><td>0.328</td><td>30.3%</td><td>91.3%</td><td>33</td><td>23</td></tr>
+<tr><td>FXI</td><td>60</td><td>60</td><td>0.335</td><td>24.0%</td><td>94.7%</td><td>25</td><td>19</td></tr>
+<tr><td>FXI</td><td>75</td><td>75</td><td>0.333</td><td>20.0%</td><td>93.8%</td><td>20</td><td>16</td></tr>
+<tr><td>FXI</td><td>90</td><td>90</td><td>0.260</td><td>37.5%</td><td>100.0%</td><td>16</td><td>10</td></tr>
+<tr><td>GDX</td><td>45</td><td>45</td><td>0.225</td><td>15.6%</td><td>92.6%</td><td>32</td><td>27</td></tr>
+<tr><td>GDX</td><td>60</td><td>60</td><td>0.211</td><td>8.3%</td><td>77.3%</td><td>24</td><td>22</td></tr>
+<tr><td>GDX</td><td>75</td><td>75</td><td>0.232</td><td>10.5%</td><td>88.2%</td><td>19</td><td>17</td></tr>
+<tr><td>GDX</td><td>90</td><td>90</td><td>0.247</td><td>18.8%</td><td>92.3%</td><td>16</td><td>13</td></tr>
+<tr><td>GLD</td><td>45</td><td>45</td><td>0.333</td><td>36.4%</td><td>85.7%</td><td>33</td><td>21</td></tr>
+<tr><td>GLD</td><td>60</td><td>60</td><td>0.248</td><td>32.0%</td><td>88.2%</td><td>25</td><td>17</td></tr>
+<tr><td>GLD</td><td>75</td><td>75</td><td>0.300</td><td>30.0%</td><td>85.7%</td><td>20</td><td>14</td></tr>
+<tr><td>GLD</td><td>90</td><td>90</td><td>0.352</td><td>25.0%</td><td>83.3%</td><td>16</td><td>12</td></tr>
+<tr><td>GOOGL</td><td>45</td><td>45</td><td>0.163</td><td>27.3%</td><td>79.2%</td><td>33</td><td>24</td></tr>
+<tr><td>GOOGL</td><td>60</td><td>60</td><td>0.130</td><td>24.0%</td><td>78.9%</td><td>25</td><td>19</td></tr>
+<tr><td>GOOGL</td><td>75</td><td>75</td><td>0.146</td><td>35.0%</td><td>53.8%</td><td>20</td><td>13</td></tr>
+<tr><td>GOOGL</td><td>90</td><td>90</td><td>0.152</td><td>37.5%</td><td>80.0%</td><td>16</td><td>10</td></tr>
+<tr><td>HYG</td><td>45</td><td>45</td><td>0.786</td><td>0.0%</td><td>87.1%</td><td>31</td><td>31</td></tr>
+<tr><td>HYG</td><td>60</td><td>60</td><td>0.763</td><td>4.3%</td><td>86.4%</td><td>23</td><td>22</td></tr>
+<tr><td>HYG</td><td>75</td><td>75</td><td>0.762</td><td>0.0%</td><td>88.9%</td><td>18</td><td>18</td></tr>
+<tr><td>HYG</td><td>90</td><td>90</td><td>0.848</td><td>6.7%</td><td>85.7%</td><td>15</td><td>14</td></tr>
+<tr><td>IBM</td><td>45</td><td>45</td><td>0.217</td><td>42.4%</td><td>78.9%</td><td>33</td><td>19</td></tr>
+<tr><td>IBM</td><td>60</td><td>60</td><td>0.152</td><td>32.0%</td><td>88.2%</td><td>25</td><td>17</td></tr>
+<tr><td>IBM</td><td>75</td><td>75</td><td>0.145</td><td>25.0%</td><td>86.7%</td><td>20</td><td>15</td></tr>
+<tr><td>IBM</td><td>90</td><td>90</td><td>0.162</td><td>18.8%</td><td>100.0%</td><td>16</td><td>13</td></tr>
+<tr><td>INTC</td><td>45</td><td>45</td><td>0.208</td><td>21.2%</td><td>69.2%</td><td>33</td><td>26</td></tr>
+<tr><td>INTC</td><td>60</td><td>60</td><td>0.168</td><td>40.0%</td><td>100.0%</td><td>25</td><td>15</td></tr>
+<tr><td>INTC</td><td>75</td><td>75</td><td>0.212</td><td>35.0%</td><td>84.6%</td><td>20</td><td>13</td></tr>
+<tr><td>INTC</td><td>90</td><td>90</td><td>0.225</td><td>25.0%</td><td>91.7%</td><td>16</td><td>12</td></tr>
+<tr><td>IWM</td><td>45</td><td>45</td><td>0.235</td><td>6.1%</td><td>87.1%</td><td>33</td><td>31</td></tr>
+<tr><td>IWM</td><td>60</td><td>60</td><td>0.175</td><td>20.0%</td><td>95.0%</td><td>25</td><td>20</td></tr>
+<tr><td>IWM</td><td>75</td><td>75</td><td>0.185</td><td>25.0%</td><td>93.3%</td><td>20</td><td>15</td></tr>
+<tr><td>IWM</td><td>90</td><td>90</td><td>0.192</td><td>31.2%</td><td>100.0%</td><td>16</td><td>11</td></tr>
+<tr><td>JPM</td><td>45</td><td>45</td><td>0.381</td><td>9.1%</td><td>93.3%</td><td>33</td><td>30</td></tr>
+<tr><td>JPM</td><td>60</td><td>60</td><td>0.355</td><td>12.0%</td><td>86.4%</td><td>25</td><td>22</td></tr>
+<tr><td>JPM</td><td>75</td><td>75</td><td>0.369</td><td>20.0%</td><td>100.0%</td><td>20</td><td>16</td></tr>
+<tr><td>JPM</td><td>90</td><td>90</td><td>0.427</td><td>18.8%</td><td>92.3%</td><td>16</td><td>13</td></tr>
+<tr><td>KO</td><td>45</td><td>45</td><td>0.202</td><td>18.2%</td><td>88.9%</td><td>33</td><td>27</td></tr>
+<tr><td>KO</td><td>60</td><td>60</td><td>0.192</td><td>20.0%</td><td>100.0%</td><td>25</td><td>20</td></tr>
+<tr><td>KO</td><td>75</td><td>75</td><td>0.213</td><td>25.0%</td><td>100.0%</td><td>20</td><td>15</td></tr>
+<tr><td>KO</td><td>90</td><td>90</td><td>0.196</td><td>18.8%</td><td>92.3%</td><td>16</td><td>13</td></tr>
+<tr><td>MA</td><td>45</td><td>45</td><td>0.383</td><td>3.1%</td><td>100.0%</td><td>32</td><td>31</td></tr>
+<tr><td>MA</td><td>60</td><td>60</td><td>0.400</td><td>0.0%</td><td>95.8%</td><td>24</td><td>24</td></tr>
+<tr><td>MA</td><td>75</td><td>75</td><td>0.450</td><td>0.0%</td><td>94.7%</td><td>19</td><td>19</td></tr>
+<tr><td>MA</td><td>90</td><td>90</td><td>0.398</td><td>0.0%</td><td>100.0%</td><td>16</td><td>16</td></tr>
+<tr><td>MCD</td><td>45</td><td>45</td><td>0.192</td><td>9.1%</td><td>90.0%</td><td>33</td><td>30</td></tr>
+<tr><td>MCD</td><td>60</td><td>60</td><td>0.122</td><td>20.0%</td><td>100.0%</td><td>25</td><td>20</td></tr>
+<tr><td>MCD</td><td>75</td><td>75</td><td>0.182</td><td>15.0%</td><td>82.4%</td><td>20</td><td>17</td></tr>
+<tr><td>MCD</td><td>90</td><td>90</td><td>0.189</td><td>0.0%</td><td>93.8%</td><td>16</td><td>16</td></tr>
+<tr><td>META</td><td>45</td><td>45</td><td>0.197</td><td>36.4%</td><td>78.6%</td><td>22</td><td>14</td></tr>
+<tr><td>META</td><td>60</td><td>60</td><td>0.184</td><td>35.3%</td><td>90.9%</td><td>17</td><td>11</td></tr>
+<tr><td>META</td><td>75</td><td>75</td><td>0.157</td><td>38.5%</td><td>87.5%</td><td>13</td><td>8</td></tr>
+<tr><td>META</td><td>90</td><td>90</td><td>0.176</td><td>54.5%</td><td>80.0%</td><td>11</td><td>5</td></tr>
+<tr><td>MSFT</td><td>45</td><td>45</td><td>0.214</td><td>21.2%</td><td>80.8%</td><td>33</td><td>26</td></tr>
+<tr><td>MSFT</td><td>60</td><td>60</td><td>0.195</td><td>24.0%</td><td>84.2%</td><td>25</td><td>19</td></tr>
+<tr><td>MSFT</td><td>75</td><td>75</td><td>0.213</td><td>20.0%</td><td>93.8%</td><td>20</td><td>16</td></tr>
+<tr><td>MSFT</td><td>90</td><td>90</td><td>0.192</td><td>25.0%</td><td>91.7%</td><td>16</td><td>12</td></tr>
+<tr><td>NFLX</td><td>45</td><td>45</td><td>0.437</td><td>18.2%</td><td>100.0%</td><td>33</td><td>27</td></tr>
+<tr><td>NFLX</td><td>60</td><td>60</td><td>0.403</td><td>12.0%</td><td>81.8%</td><td>25</td><td>22</td></tr>
+<tr><td>NFLX</td><td>75</td><td>75</td><td>0.406</td><td>15.0%</td><td>94.1%</td><td>20</td><td>17</td></tr>
+<tr><td>NFLX</td><td>90</td><td>90</td><td>0.414</td><td>37.5%</td><td>100.0%</td><td>16</td><td>10</td></tr>
+<tr><td>NKE</td><td>45</td><td>45</td><td>0.163</td><td>33.3%</td><td>72.7%</td><td>33</td><td>22</td></tr>
+<tr><td>NKE</td><td>60</td><td>60</td><td>0.162</td><td>32.0%</td><td>88.2%</td><td>25</td><td>17</td></tr>
+<tr><td>NKE</td><td>75</td><td>75</td><td>0.193</td><td>25.0%</td><td>86.7%</td><td>20</td><td>15</td></tr>
+<tr><td>NKE</td><td>90</td><td>90</td><td>0.178</td><td>50.0%</td><td>100.0%</td><td>16</td><td>8</td></tr>
+<tr><td>NVDA</td><td>45</td><td>45</td><td>0.252</td><td>42.4%</td><td>94.7%</td><td>33</td><td>19</td></tr>
+<tr><td>NVDA</td><td>60</td><td>60</td><td>0.235</td><td>40.0%</td><td>93.3%</td><td>25</td><td>15</td></tr>
+<tr><td>NVDA</td><td>75</td><td>75</td><td>0.189</td><td>35.0%</td><td>100.0%</td><td>20</td><td>13</td></tr>
+<tr><td>NVDA</td><td>90</td><td>90</td><td>0.156</td><td>43.8%</td><td>100.0%</td><td>16</td><td>9</td></tr>
+<tr><td>QQQ</td><td>45</td><td>45</td><td>0.237</td><td>39.4%</td><td>90.0%</td><td>33</td><td>20</td></tr>
+<tr><td>QQQ</td><td>60</td><td>60</td><td>0.292</td><td>20.0%</td><td>80.0%</td><td>25</td><td>20</td></tr>
+<tr><td>QQQ</td><td>75</td><td>75</td><td>0.205</td><td>30.0%</td><td>85.7%</td><td>20</td><td>14</td></tr>
+<tr><td>QQQ</td><td>90</td><td>90</td><td>0.255</td><td>37.5%</td><td>90.0%</td><td>16</td><td>10</td></tr>
+<tr><td>SPY</td><td>45</td><td>45</td><td>0.439</td><td>18.2%</td><td>85.2%</td><td>33</td><td>27</td></tr>
+<tr><td>SPY</td><td>60</td><td>60</td><td>0.381</td><td>12.0%</td><td>100.0%</td><td>25</td><td>22</td></tr>
+<tr><td>SPY</td><td>75</td><td>75</td><td>0.381</td><td>20.0%</td><td>87.5%</td><td>20</td><td>16</td></tr>
+<tr><td>SPY</td><td>90</td><td>90</td><td>0.388</td><td>25.0%</td><td>91.7%</td><td>16</td><td>12</td></tr>
+<tr><td>TLT</td><td>45</td><td>45</td><td>0.230</td><td>6.2%</td><td>93.3%</td><td>16</td><td>15</td></tr>
+<tr><td>TLT</td><td>60</td><td>60</td><td>0.233</td><td>25.0%</td><td>100.0%</td><td>12</td><td>9</td></tr>
+<tr><td>TLT</td><td>75</td><td>75</td><td>0.145</td><td>0.0%</td><td>77.8%</td><td>9</td><td>9</td></tr>
+<tr><td>TLT</td><td>90</td><td>90</td><td>0.220</td><td>12.5%</td><td>100.0%</td><td>8</td><td>7</td></tr>
+<tr><td>TSLA</td><td>45</td><td>45</td><td>0.174</td><td>32.0%</td><td>94.1%</td><td>25</td><td>17</td></tr>
+<tr><td>TSLA</td><td>60</td><td>60</td><td>0.199</td><td>15.8%</td><td>81.2%</td><td>19</td><td>16</td></tr>
+<tr><td>TSLA</td><td>75</td><td>75</td><td>0.182</td><td>33.3%</td><td>80.0%</td><td>15</td><td>10</td></tr>
+<tr><td>TSLA</td><td>90</td><td>90</td><td>0.155</td><td>0.0%</td><td>83.3%</td><td>12</td><td>12</td></tr>
+<tr><td>UNH</td><td>45</td><td>45</td><td>0.308</td><td>9.1%</td><td>93.3%</td><td>33</td><td>30</td></tr>
+<tr><td>UNH</td><td>60</td><td>60</td><td>0.258</td><td>8.0%</td><td>82.6%</td><td>25</td><td>23</td></tr>
+<tr><td>UNH</td><td>75</td><td>75</td><td>0.284</td><td>10.0%</td><td>88.9%</td><td>20</td><td>18</td></tr>
+<tr><td>UNH</td><td>90</td><td>90</td><td>0.283</td><td>0.0%</td><td>87.5%</td><td>16</td><td>16</td></tr>
+<tr><td>USO</td><td>45</td><td>45</td><td>0.233</td><td>21.2%</td><td>88.5%</td><td>33</td><td>26</td></tr>
+<tr><td>USO</td><td>60</td><td>60</td><td>0.214</td><td>16.7%</td><td>90.0%</td><td>24</td><td>20</td></tr>
+<tr><td>USO</td><td>75</td><td>75</td><td>0.206</td><td>26.3%</td><td>100.0%</td><td>19</td><td>14</td></tr>
+<tr><td>USO</td><td>90</td><td>90</td><td>0.170</td><td>25.0%</td><td>100.0%</td><td>16</td><td>12</td></tr>
+<tr><td>V</td><td>45</td><td>45</td><td>0.332</td><td>3.4%</td><td>100.0%</td><td>29</td><td>28</td></tr>
+<tr><td>V</td><td>60</td><td>60</td><td>0.342</td><td>0.0%</td><td>95.5%</td><td>22</td><td>22</td></tr>
+<tr><td>V</td><td>75</td><td>75</td><td>0.347</td><td>5.9%</td><td>100.0%</td><td>17</td><td>16</td></tr>
+<tr><td>V</td><td>90</td><td>90</td><td>0.328</td><td>7.1%</td><td>92.3%</td><td>14</td><td>13</td></tr>
+<tr><td>XLE</td><td>45</td><td>45</td><td>0.226</td><td>15.2%</td><td>92.9%</td><td>33</td><td>28</td></tr>
+<tr><td>XLE</td><td>60</td><td>60</td><td>0.207</td><td>24.0%</td><td>100.0%</td><td>25</td><td>19</td></tr>
+<tr><td>XLE</td><td>75</td><td>75</td><td>0.249</td><td>25.0%</td><td>93.3%</td><td>20</td><td>15</td></tr>
+<tr><td>XLE</td><td>90</td><td>90</td><td>0.246</td><td>12.5%</td><td>85.7%</td><td>16</td><td>14</td></tr>
+<tr><td>XLF</td><td>45</td><td>45</td><td>0.591</td><td>9.1%</td><td>90.0%</td><td>33</td><td>30</td></tr>
+<tr><td>XLF</td><td>60</td><td>60</td><td>0.476</td><td>12.0%</td><td>90.9%</td><td>25</td><td>22</td></tr>
+<tr><td>XLF</td><td>75</td><td>75</td><td>0.514</td><td>15.0%</td><td>94.1%</td><td>20</td><td>17</td></tr>
+<tr><td>XLF</td><td>90</td><td>90</td><td>0.613</td><td>12.5%</td><td>78.6%</td><td>16</td><td>14</td></tr>
+<tr><td>XLI</td><td>45</td><td>45</td><td>0.321</td><td>15.2%</td><td>82.1%</td><td>33</td><td>28</td></tr>
+<tr><td>XLI</td><td>60</td><td>60</td><td>0.250</td><td>16.0%</td><td>95.2%</td><td>25</td><td>21</td></tr>
+<tr><td>XLI</td><td>75</td><td>75</td><td>0.304</td><td>15.0%</td><td>88.2%</td><td>20</td><td>17</td></tr>
+<tr><td>XLI</td><td>90</td><td>90</td><td>0.301</td><td>18.8%</td><td>76.9%</td><td>16</td><td>13</td></tr>
+<tr><td>XLK</td><td>45</td><td>45</td><td>0.237</td><td>39.4%</td><td>85.0%</td><td>33</td><td>20</td></tr>
+<tr><td>XLK</td><td>60</td><td>60</td><td>0.253</td><td>24.0%</td><td>78.9%</td><td>25</td><td>19</td></tr>
+<tr><td>XLK</td><td>75</td><td>75</td><td>0.182</td><td>25.0%</td><td>80.0%</td><td>20</td><td>15</td></tr>
+<tr><td>XLK</td><td>90</td><td>90</td><td>0.264</td><td>25.0%</td><td>83.3%</td><td>16</td><td>12</td></tr>
+<tr><td>XLP</td><td>45</td><td>45</td><td>0.198</td><td>18.2%</td><td>96.3%</td><td>33</td><td>27</td></tr>
+<tr><td>XLP</td><td>60</td><td>60</td><td>0.189</td><td>20.0%</td><td>95.0%</td><td>25</td><td>20</td></tr>
+<tr><td>XLP</td><td>75</td><td>75</td><td>0.243</td><td>20.0%</td><td>87.5%</td><td>20</td><td>16</td></tr>
+<tr><td>XLP</td><td>90</td><td>90</td><td>0.232</td><td>0.0%</td><td>81.2%</td><td>16</td><td>16</td></tr>
+<tr><td>XLU</td><td>45</td><td>45</td><td>0.159</td><td>15.2%</td><td>78.6%</td><td>33</td><td>28</td></tr>
+<tr><td>XLU</td><td>60</td><td>60</td><td>0.111</td><td>20.0%</td><td>90.0%</td><td>25</td><td>20</td></tr>
+<tr><td>XLU</td><td>75</td><td>75</td><td>0.169</td><td>15.0%</td><td>94.1%</td><td>20</td><td>17</td></tr>
+<tr><td>XLU</td><td>90</td><td>90</td><td>0.176</td><td>0.0%</td><td>93.8%</td><td>16</td><td>16</td></tr>
+<tr><td>XLV</td><td>45</td><td>45</td><td>0.259</td><td>15.2%</td><td>92.9%</td><td>33</td><td>28</td></tr>
+<tr><td>XLV</td><td>60</td><td>60</td><td>0.209</td><td>16.0%</td><td>95.2%</td><td>25</td><td>21</td></tr>
+<tr><td>XLV</td><td>75</td><td>75</td><td>0.246</td><td>20.0%</td><td>93.8%</td><td>20</td><td>16</td></tr>
+<tr><td>XLV</td><td>90</td><td>90</td><td>0.235</td><td>6.2%</td><td>100.0%</td><td>16</td><td>15</td></tr>
+<tr><td>XOM</td><td>45</td><td>45</td><td>0.179</td><td>27.3%</td><td>91.7%</td><td>33</td><td>24</td></tr>
+<tr><td>XOM</td><td>60</td><td>60</td><td>0.174</td><td>28.0%</td><td>100.0%</td><td>25</td><td>18</td></tr>
+<tr><td>XOM</td><td>75</td><td>75</td><td>0.215</td><td>20.0%</td><td>93.8%</td><td>20</td><td>16</td></tr>
+<tr><td>XOM</td><td>90</td><td>90</td><td>0.204</td><td>18.8%</td><td>84.6%</td><td>16</td><td>13</td></tr>
+
+            </tbody>
+        </table>
+        
+        <h2>Visualizations</h2>
+        
+        <h3>MAPE Heatmap</h3>
+        <img src="mape_heatmap.png" alt="MAPE Heatmap">
+        
+    <h3>Terminal Return Band Hit-Rate Heatmap (Iron Condor Proxy)</h3>
+<img src="band_heatmap.png" alt="Terminal Return Band Hit-Rate Heatmap">
+
+        <h3>Excluded Share Heatmap</h3>
+        <img src="excluded_heatmap.png" alt="Excluded Share Heatmap">
+        
+    </body>
+    </html>
+    
